@@ -10,7 +10,7 @@ https://owltube.vercel.app/
 
 ## 💻To deploy locally:
 
-1)git clone
-2)cd
-3)npm install
-4)npm run dev
+1. git clone
+2. cd
+3. npm install
+4. npm run dev
