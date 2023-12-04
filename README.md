@@ -1,6 +1,6 @@
 # Anime mini-app
 
-## ℹAbout:
+## ℹ About:
 
 This is a mini anime app.
 
