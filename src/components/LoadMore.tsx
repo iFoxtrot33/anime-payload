@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { useState, useEffect } from "react";
-import { fetchAnime } from "@/app/action";
+import { fetchAnime } from "../app/action";
 import { AnimeProp, AnimeCard } from "./AnimeCard";
 
 export type AnimeCard = JSX.Element;

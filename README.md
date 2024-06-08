@@ -2,7 +2,7 @@
 
 ## ℹ About:
 
-This is a mini anime app.
+DEMO anime app with admin panel (Payload CMS).
 
 ## 🌐Demo:
 
@@ -16,10 +16,15 @@ https://anime-phi-five.vercel.app
 4. npm run dev
 
 ## 🎛️Tests:
+
 <a href="https://codeclimate.com/github/iFoxtrot33/anime/maintainability"><img src="https://api.codeclimate.com/v1/badges/ebab5e31af6814f93e12/maintainability" /></a>
 
 ## 🛠Stack:
+
 - Next.js 14
 - React
+- tRPC
+- Express
+- Payload CMS
 - Tailwind CSS
 - Farmer Motion
