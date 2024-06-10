@@ -5,13 +5,12 @@ import Image from "next/image";
 export interface AnimeProp {
   id: string;
   name: string;
-  image: {
-    original: string;
+  card_image: {
+    url: string;
   };
-  kind: string;
+
   episodes: number;
-  episodes_aired: number;
-  score: string;
+  rating: string;
 }
 
 interface Prop {
@@ -39,7 +38,7 @@ export function AnimeCard({ anime, index }: Prop) {
     >
       <div className="relative w-full h-[37vh]">
         <Image
-          src={`https://shikimori.one${anime.image.original}`}
+          src={anime.card_image.url}
           alt={anime.name}
           fill
           className="rounded-xl"
@@ -52,7 +51,7 @@ export function AnimeCard({ anime, index }: Prop) {
           </h2>
           <div className="py-1 px-2 bg-[#161921] rounded-sm">
             <p className="text-white text-sm font-bold capitalize">
-              {anime.kind}
+              {anime.name}
             </p>
           </div>
         </div>
@@ -65,9 +64,7 @@ export function AnimeCard({ anime, index }: Prop) {
               height={20}
               className="object-contain"
             />
-            <p className="text-base text-white font-bold">
-              {anime.episodes || anime.episodes_aired}
-            </p>
+            <p className="text-base text-white font-bold">{anime.episodes}</p>
           </div>
           <div className="flex flex-row gap-2 items-center">
             <Image
@@ -77,7 +74,7 @@ export function AnimeCard({ anime, index }: Prop) {
               height={18}
               className="object-contain"
             />
-            <p className="text-base font-bold text-[#FFAD49]">{anime.score}</p>
+            <p className="text-base font-bold text-[#FFAD49]">{anime.rating}</p>
           </div>
         </div>
       </div>

@@ -2,9 +2,13 @@ import { CollectionConfig } from "payload/types";
 
 export const Media: CollectionConfig = {
   slug: "media",
+  access: {
+    read: () => true,
+  },
   upload: {
     staticURL: "/media",
     staticDir: "media",
+
     imageSizes: [
       {
         name: "hero_banner",
@@ -19,6 +23,7 @@ export const Media: CollectionConfig = {
         position: "centre",
       },
     ],
+
     mimeTypes: ["image/*"],
   },
   fields: [],
