@@ -4,7 +4,7 @@ import TestCards from "../components/TestCards";
 import { fetchAnime } from "./action";
 
 async function Home() {
-  const data = await fetchAnime(1);
+  const data = await fetchAnime(3);
 
   return (
     <main className="sm:p-16 py-16 px-8 flex flex-col gap-10">
