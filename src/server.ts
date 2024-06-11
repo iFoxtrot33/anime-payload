@@ -10,13 +10,7 @@ const app = express();
 const cors = require("cors");
 const PORT = Number(process.env.PORT) || 3000;
 
-app.use(
-  cors({
-    origin: process.env.NEXT_PUBLIC_SERVER_URL,
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    credentials: true,
-  })
-);
+app.use(cors());
 
 const createContext = ({
   req,
