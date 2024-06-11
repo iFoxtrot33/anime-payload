@@ -10,6 +10,8 @@ const app = express();
 const cors = require("cors");
 const PORT = Number(process.env.PORT) || 3000;
 
+app.options("*", cors());
+
 app.use(
   cors({
     origin: "*",
