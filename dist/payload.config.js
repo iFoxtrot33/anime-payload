@@ -16,6 +16,8 @@ dotenv_1.default.config({
 });
 exports.default = (0, config_1.buildConfig)({
     serverURL: process.env.NEXT_PUBLIC_SERVER_URL || "",
+    cors: [process.env.NEXT_PUBLIC_SERVER_URL || "*"],
+    csrf: [process.env.NEXT_PUBLIC_SERVER_URL || "*"].filter(Boolean),
     collections: [Cards_1.Cards, Media_1.Media],
     routes: {
         admin: "/admin",

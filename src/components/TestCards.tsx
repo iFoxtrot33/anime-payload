@@ -18,12 +18,14 @@ const TestCards = () => {
   console.log(cards);
 
   return (
-    <div className="flex flex-row gap-20">
-      {cards &&
-        cards.map((item: AnimeProp, index: number) => (
-          <AnimeCard key={item.id} anime={item} index={index} />
-        ))}
-    </div>
+    <>
+      <div className="flex flex-row gap-20">
+        {cards &&
+          cards.map((item: AnimeProp, index: number) => (
+            <AnimeCard key={item.id} anime={item} index={index} />
+          ))}
+      </div>
+    </>
   );
 };
 

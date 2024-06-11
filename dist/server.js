@@ -70,7 +70,14 @@ var trpcExpress = __importStar(require("@trpc/server/adapters/express"));
 var build_1 = __importDefault(require("next/dist/build"));
 var path_1 = __importDefault(require("path"));
 var app = (0, express_1.default)();
+var cors = require("cors");
 var PORT = Number(process.env.PORT) || 3000;
+app.options("*", cors());
+app.use(cors({
+    origin: "*",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    allowedHeaders: "Content-Type",
+}));
 var createContext = function (_a) {
     var req = _a.req, res = _a.res;
     return ({ req: req, res: res });
