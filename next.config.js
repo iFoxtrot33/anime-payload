@@ -1,16 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "*",
-      },
-      {
-        protocol: "http",
-        hostname: "localhost",
-        port: "3000",
-      },
+    domains: [
+      "localhost",
+      "https://anime-payload-gxti80avg-ifoxtrot33s-projects.vercel.app/",
     ],
   },
 };
