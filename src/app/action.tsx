@@ -11,7 +11,7 @@ export const fetchAnime = async (page: number) => {
   // const data = await response.json();
 
   const queryResults = await trpc.getInfiniteCards.query({
-    limit: 10,
+    limit: 100,
     cursor: null,
     query: {
       sort: "desc",
