@@ -10,7 +10,13 @@ const app = express();
 const cors = require("cors");
 const PORT = Number(process.env.PORT) || 3000;
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    allowedHeaders: "Content-Type",
+  })
+);
 
 const createContext = ({
   req,
